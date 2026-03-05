@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="algorithm-chalenge 1"/>
+        <attribute name="authors" value="admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-05 01:39:31 PM"/>
+        <attribute name="created" value="YWRtaW47RUxNT0NIOzIwMjYtMDMtMDU7MDE6MjM6NTEgUE07MjIzNQ=="/>
+        <attribute name="edited" value="YWRtaW47RUxNT0NIOzIwMjYtMDMtMDU7MDE6Mzk6MzEgUE07MTsyMzQ4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nbrTea, priceTea, totalPrice" type="Integer" array="False" size=""/>
+            <declare name="studentOrNot" type="String" array="False" size=""/>
+            <output expression="&quot;Entre the numbre of tea you want&quot;" newline="True"/>
+            <input variable="nbrTea"/>
+            <output expression="&quot;Entre the price of the tea &quot;" newline="True"/>
+            <input variable="priceTea"/>
+            <output expression="&quot;Are you a student or not , enter : student ,notStudent &quot;" newline="True"/>
+            <input variable="studentOrNot"/>
+            <if expression="studentOrNot == &quot;student&quot; and nbrTea &gt;= 5">
+                <then>
+                    <assign variable="totalPrice" expression="(nbrTea * priceTea) * 0.8 - nbrTea"/>
+                </then>
+                <else>
+                    <if expression="studentOrNot == &quot;student&quot; and nbrTea &lt; 5">
+                        <then>
+                            <assign variable="totalPrice" expression="(nbrTea * priceTea) * 0.8"/>
+                        </then>
+                        <else>
+                            <if expression="studentOrNot == &quot;notStudent&quot; and nbrTea &gt;= 5">
+                                <then>
+                                    <assign variable="totalPrice" expression="(nbrTea * priceTea) - nbrTea"/>
+                                </then>
+                                <else>
+                                    <assign variable="totalPrice" expression="nbrTea * priceTea"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;this is the total price of your command : &quot; &amp; totalPrice" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
