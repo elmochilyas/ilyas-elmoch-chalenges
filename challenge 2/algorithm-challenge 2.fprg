@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="algorithm-challenge 2"/>
+        <attribute name="authors" value="admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-05 01:22:46 PM"/>
+        <attribute name="created" value="YWRtaW47RUxNT0NIOzIwMjYtMDMtMDU7MTI6MTU6MTQgUE07MjIzNw=="/>
+        <attribute name="edited" value="YWRtaW47RUxNT0NIOzIwMjYtMDMtMDU7MDE6MjI6NDYgUE07MTsyMzQ2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="age, price" type="Integer" array="False" size=""/>
+            <assign variable="price" expression="0"/>
+            <output expression="&quot;enter your age&quot;" newline="True"/>
+            <input variable="age"/>
+            <if expression="age &lt; 12">
+                <then>
+                    <assign variable="price" expression="20"/>
+                    <output expression="&quot;Special: Children's Menu included!&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="12 &lt;= age and age &lt;= 18">
+                        <then>
+                            <assign variable="price" expression="40"/>
+                        </then>
+                        <else>
+                            <if expression="age &gt; 60">
+                                <then>
+                                    <assign variable="price" expression="30"/>
+                                </then>
+                                <else>
+                                    <assign variable="price" expression="60"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;the price is :&quot; &amp; price" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
