@@ -16,9 +16,8 @@ $categories = $stmt->fetchAll();
 $search = $_GET['search'] ?? '';
 $category = $_GET['category'] ?? '';
 
-// ==========================
+
 // DYNAMIC QUERY
-// ==========================
 $sql = "
     SELECT 
         prompts.id,

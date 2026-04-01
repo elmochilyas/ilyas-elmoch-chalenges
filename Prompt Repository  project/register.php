@@ -14,8 +14,10 @@
             $username = trim($_POST['username']);
             $email = trim($_POST['email']);
             $password = $_POST['password'];
-            if (empty($username) || empty($email) || empty($password)) { $error = "All fields are required"; } 
-            elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) { $error = "Invalid email format"; } 
+            if (empty($username) || empty($email) || empty($password))
+                 { $error = "All fields are required"; } 
+            elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) 
+                { $error = "Invalid email format"; } 
             else {  
                 $hash = password_hash($password, PASSWORD_DEFAULT);
                 $stmt = $pdo->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
