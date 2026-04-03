@@ -12,7 +12,7 @@ $stmt = $pdo->query("
     FROM users
     LEFT JOIN prompts ON users.id = prompts.user_id
     GROUP BY users.id
-    ORDER BY total_prompts DESC
+    ORDER BY total_prompts DESC LIMIT 1
 ");
 $users = $stmt->fetchAll();
 ?>

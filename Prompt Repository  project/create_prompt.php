@@ -39,13 +39,13 @@
         <h2>Create New Prompt</h2>
         <form method="post">
             <div class="form-group">
-                <input type="text" name="title" placeholder="Title" required>
+                <input type="text" name="title" placeholder="Title" >
             </div>
             <div class="form-group">
-                <textarea name="content" placeholder="Prompt content" required></textarea>
+                <textarea name="content" placeholder="Prompt content" ></textarea>
             </div>
             <div class="form-group">
-                <select name="category_id" required>
+                <select name="category_id" >
                     <option value="">Select category</option>
                     <?php foreach ($categories as $cat): ?>
                         <option value="<?= $cat['id'] ?>">
